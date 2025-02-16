@@ -1,0 +1,30 @@
+services:
+  app:
+    build: .
+    container_name: backend
+    ports:
+      - "8080:8080"
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/currency
+      SPRING_DATASOURCE_USERNAME: currency
+      SPRING_DATASOURCE_PASSWORD: currency
+    depends_on:
+      - postgres
+    restart: always
+
+  postgres:
+    image: postgres:17
+    container_name: db-postgres
+    environment:
+      POSTGRES_DB: currency
+      POSTGRES_PASSWORD: currency
+      POSTGRES_USER: currency
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    restart: always
+
+volumes:
+  postgres-data:
+    driver: local

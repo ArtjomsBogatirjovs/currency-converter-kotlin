@@ -1,3 +1,8 @@
+currency-conversion:
+  defaultFee: 0.01
+  ecb-api: https://www.ecb.europa.eu/stats/eurofxref/eurofxref-daily.xml
+server:
+  address: 0.0.0.0
 spring:
   datasource:
     url: jdbc:postgresql://localhost:5432/currency

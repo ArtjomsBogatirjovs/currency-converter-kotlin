@@ -4,11 +4,15 @@ springBoot = "3.4.2"
 springDependencyManagement = "1.1.7"
 jooqPlugin = "9.0"
 jooq = "3.19.18"
+mockk = "1.13.16"
+testContainers = "1.20.5"
 
 [libraries]
 springBootStarterJooq = { module = "org.springframework.boot:spring-boot-starter-jooq" }
 springBootStarterWeb = { module = "org.springframework.boot:spring-boot-starter-web" }
 springBootStarterTest = { module = "org.springframework.boot:spring-boot-starter-test" }
+jakartaPersistence = { module = "jakarta.persistence:jakarta.persistence-api" }
+jakartaValidation = { module = "jakarta.validation:jakarta.validation-api" }
 
 jacksonModuleKotlin = { module = "com.fasterxml.jackson.module:jackson-module-kotlin" }
 kotlinReflect = { module = "org.jetbrains.kotlin:kotlin-reflect", version.ref = "kotlin" }
@@ -19,6 +23,9 @@ postgresql = { module = "org.postgresql:postgresql" }
 
 kotlinTestJunit5 = { module = "org.jetbrains.kotlin:kotlin-test-junit5", version.ref = "kotlin" }
 junitPlatformLauncher = { module = "org.junit.platform:junit-platform-launcher" }
+mockkDependency = { module = "io.mockk:mockk", version.ref = "mockk" }
+testContainersJunit = { module = "org.testcontainers:junit-jupiter", version.ref = "testContainers" }
+testContainersPostgres = { module = "org.testcontainers:postgresql", version.ref = "testContainers" }
 
 [plugins]
 kotlinJvm = { id = "org.jetbrains.kotlin.jvm", version.ref = "kotlin" }
@@ -26,3 +33,4 @@ kotlinSpring = { id = "org.jetbrains.kotlin.plugin.spring", version.ref = "kotli
 springBoot = { id = "org.springframework.boot", version.ref = "springBoot" }
 springDependencyManagement = { id = "io.spring.dependency-management", version.ref = "springDependencyManagement" }
 jooqPlugin = { id = "nu.studer.jooq", version.ref = "jooqPlugin" }
+

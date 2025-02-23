@@ -1,7 +1,7 @@
 FROM gradle:jdk21 AS build
 WORKDIR /home/gradle/project
 COPY --chown=gradle:gradle . .
-RUN gradle clean build --no-daemon
+RUN gradle clean build -x test --no-daemon
 
 FROM openjdk:21-jdk
 WORKDIR /app

@@ -186,19 +186,6 @@ spring:
 
 ---
 
-## Additional Notes
-
-- **Building, Testing, and Running:**  
-  All tasks can be executed from the command-line using the Gradle Wrapper (`./gradlew ...`).
-- **Docker:**  
-  For containerized deployment, the Dockerfile builds the application image and docker-compose.yml orchestrates both the application and PostgreSQL container.
-- **Robust Code:**  
-  The project emphasizes robust, readable code with clear separation between API, service, and repository layers.
-- **Documentation:**  
-  This README explains how to build, test, and run the application. If you have any further questions, please refer to the documentation provided in the source code or contact the project maintainers.
-
----
-
 ## How to Run the Project
 
 1. **Build and Test:**
